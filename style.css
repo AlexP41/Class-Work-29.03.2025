@@ -5,14 +5,16 @@
 }
 
 body {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh;
   background: #555;
 }
 
+img {
+  max-width: 100%;
+}
+
+
 .btn {
+  margin: 50px;
   display: inline-block;
   position: relative;
   background: #fff;
@@ -53,4 +55,82 @@ body {
   color: #fff;
   box-shadow: 0 0 35px cyan;
   cursor: pointer;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.btn-2 {
+  margin: 50px;
+  display: inline-block;
+  margin-top: 200px;
+  position: relative;
+  background-color: green;
+  overflow:hidden;
+  z-index: 2;
+}
+
+.btn-2 img {
+  display: block;
+  position: relative;
+  transform: translateY(-30px scale(1.25));
+  transition: all 0.5s;
+  z-index: 2;
+  opacity: 100%;
+}
+
+
+.btn-2:hover img {
+  transform: translateY(20px) scale(1.25);
+  opacity: 60%;
+}
+
+.btn-2::after {
+  content: '';
+  position: absolute;
+  top: 20px;
+  bottom: 20px;
+  left: 40px;
+  right: 40px;
+  border-top: 2px solid red;
+  border-bottom: 2px solid red;
+  transition: all 0.5s;
+  transform: scaleY(-1.25);
+
+}
+
+.btn-2:hover::after {
+  transform: scaleY(1);
+}
+
+.btn-2::before {
+  content: '';
+  position: absolute;
+  top: 10px;
+  bottom: 10px;
+  left: 60px;
+  right: 60px;
+  border-left: 2px solid red;
+  border-right: 2px solid red;
+  transition: all 0.5s;
+  transform: scaleX(-1.25);
+}
+
+.btn-2:hover::before {
+  transform: scaleX(1);
 }
